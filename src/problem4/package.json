@@ -1,0 +1,51 @@
+{
+  "name": "problem4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "scripts": {
+    "prestart": "prisma generate && npm run build",
+    "build": "tsc",
+    "start": "DEBUG=http ts-node src/app.ts",
+    "serve": "node dist/app.js",
+    "prisma:studio": "prisma studio",
+    "prisma:generate": "prisma generate",
+    "prisma:init": "prisma db seed ",
+    "test": "jest --verbose",
+    "test:cov": "npm run test -- --coverage",
+    "test:watch": "npm run test -- --watch"
+  },
+  "author": "khanh.pham@khanhpham.org",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "5.4.2",
+    "body-parser": "1.20.2",
+    "express": "^4.18.2",
+    "express-joi-validation": "^5.0.1",
+    "express-jsdoc-swagger": "1.8.0",
+    "joi": "^17.11.0",
+    "prisma": "^5.4.2",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "3.11.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.19",
+    "@types/jest": "29.5.5",
+    "@types/node": "^20.8.5",
+    "concurrently": "^8.2.1",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^2.3.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2",
+    "ts-jest": "29.1.1"
+  }
+}
